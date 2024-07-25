@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcularMedia() {
+            let nota1 = parseFloat(prompt("Digite a primeira nota:"));
+            let nota2 = parseFloat(prompt("Digite a segunda nota:"));
+            let nota3 = parseFloat(prompt("Digite a terceira nota:"));
+            
+            let media = (Number(nota1) + Number(nota2) + Number(nota3)) / 2;
+
+            if (media < 7) {
+                window.alert("Você foi reprovado. Sua média é: " + media);
+            } else {
+                window.alert("Você foi aprovado. Sua média é: " + media);
+            }
+        }
+calcularMedia();
+        
+    </script>
+</body>
+</html>

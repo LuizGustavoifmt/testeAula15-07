@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>
+        <button  onclick="calcularTriangulo()">Triangulo</button>
+        <button  conclick="calcularTrapezio()">Trapézio</button>
+        <button  onclick="calcularCirculo()">Circulo</button>
+        <button  onclick="calcularQuadrado()">Quadrado</button>
+
+    </button>
+    <script>
+        function calcularTriangulo(){
+            let baseTriangulo = parseFloat(prompt("Digite o valor da base do Triangulo:"));
+            let alturaTriangulo = parseFloat(prompt("Digite o valor da altura do Triangulo:"));
+            let areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
+            alert("A área do Triângulo é: " + areaTriangulo);
+        }
+
+        function calcularTrapezio(){
+            let baseMenorTrapezio = parseFloat(prompt("Digite o valor da base menor do Trapézio:"));
+            let baseMaiorTrapezio = parseFloat(prompt("Digite o valor da base maior do Trapézio:"));
+            let alturaTrapezio = parseFloat(prompt("Digite o valor da altura do Trapézio:"));
+            let areaTrapezio = ((baseMenorTrapezio + baseMaiorTrapezio) * alturaTrapezio) / 2;
+            alert("A área do Trapézio é: " + areaTrapezio);
+        }
+
+        function calcularCirculo(){
+                    let raioCirculo = parseFloat(prompt("Digite o valor do raio do Circulo:"));
+                    let areaCirculo = Math.PI * Math.pow(raioCirculo, 2);
+                    alert("A área do Circulo é: " + areaCirculo.toFixed(2));
+                }
+
+                function calcularQuadrado(){
+                    let ladoQuadrado = parseFloat(prompt("Digite o valor do lado do Quadrado:"));
+                    let areaQuadrado = Math.pow(ladoQuadrado, 2);
+                    alert("A área do Quadrado é: " + areaQuadrado);
+                }
+                
+                var figura = prompt("Digite o tipo de figura geometrica (triangulo, trapezio, circulo etc.):").toLowerCase();
+                
+                switch (figura) {
+                    case "triangulo":
+                        calcularTriangulo();
+                        break;
+                    case "trapezio":
+                        calcularTrapezio();
+                        break;
+                    case "circulo":
+                        calcularCirculo();
+                        break;
+                    case "quadrado":
+                        calcularQuadrado();
+                        break;
+                    default:
+                        alert("Figura Geometrica Invalida!");
+                }
+    </script>
+</body>
+</html>
